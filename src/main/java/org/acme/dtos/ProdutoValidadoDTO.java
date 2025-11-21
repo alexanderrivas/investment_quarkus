@@ -1,6 +1,7 @@
 package org.acme.dtos;
 
 import lombok.*;
+import org.acme.enums.TipoRisco;
 
 @Getter
 @Setter
@@ -12,5 +13,5 @@ public class ProdutoValidadoDTO {
     private String nome;
     private String tipo;
     private Double rentabilidade;
-    private String risco;
+    private TipoRisco risco;
 }

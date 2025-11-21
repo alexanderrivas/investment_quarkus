@@ -1,4 +1,4 @@
-package org.acme.entities;
+package org.acme.entities.mssql;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,9 +8,9 @@ import org.acme.enums.TipoRisco;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Builder
-@Table(name = "PRODUTO")
+@Entity
+@Table(name = "PRODUTO", schema = "dbo")
 public class ProdutoEntity {
 
     @Id
@@ -20,5 +20,6 @@ public class ProdutoEntity {
     private Double rentabilidade;
     @Enumerated(EnumType.STRING)
     private TipoRisco risco;
-
+    @Column(name = "pontuacao_risco")
+    private int pontuacaoRisco;
 }

@@ -1,16 +1,16 @@
 package org.acme.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.math.BigDecimal;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ResultadoSimulacaoDTO {
-    private Double valorFinal;
+    private BigDecimal valorFinal;
     private Double rentabilidadeEfetiva;
     private Integer prazoMeses;
 }

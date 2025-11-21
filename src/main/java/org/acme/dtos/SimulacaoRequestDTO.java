@@ -1,15 +1,18 @@
 package org.acme.dtos;
 
 import io.smallrye.common.constraint.NotNull;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;
 import lombok.*;
+
 import java.math.BigDecimal;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class SimulacaoRequestDTO {
 
     @NotNull
@@ -25,6 +28,4 @@ public class SimulacaoRequestDTO {
 
     @NotNull
     private String tipoProduto;
-
-
 }
